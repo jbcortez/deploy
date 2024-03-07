@@ -26,7 +26,7 @@ jobs:
         run: git checkout -b build
 
       - name: Fast forward
-        run: git config pull.rebase only
+        run: git config pull.rebase true
 
       - name: Pull from build
         run: git pull origin build
