@@ -25,8 +25,11 @@ jobs:
       - name: Create build branch
         run: git checkout -b build
 
-      - name: Fast forward
+      - name: Config rebase
         run: git config pull.rebase true
+
+      - name: Clean
+        run: git clean -f -d
 
       - name: Pull from build
         run: git pull origin build
