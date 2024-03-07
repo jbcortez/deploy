@@ -19,6 +19,9 @@ jobs:
       - name: Build
         run: cd client && npm run build
 
+      - name: Set credentials
+        run: git config --global user.email "justin.b.cortez@gmail.com" && git config --global user.name "Justin Cortez"
+
       - name: Add changes
         run: git add .
 
