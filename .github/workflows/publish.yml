@@ -22,11 +22,11 @@ jobs:
       - name: Set credentials
         run: git config --global user.email "justin.b.cortez@gmail.com" && git config --global user.name "Justin Cortez"
 
-      - name: Fetch all branches
-        run: git fetch origin build
-
       - name: Create build branch
         run: git checkout -b build
+
+      - name: Pull from build
+        run: git pull origin build
 
       - name: Add changes
         run: git add .
@@ -36,6 +36,8 @@ jobs:
 
       - name: Commit changes
         run: git commit -m "Build"
+
+
 
       - name: Push to Another Branch
         run: git push origin build
