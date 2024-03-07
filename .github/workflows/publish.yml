@@ -25,6 +25,9 @@ jobs:
       - name: Create build branch
         run: git checkout -b build
 
+      - name: Fast forward
+        run: git config pull.ff only
+
       - name: Pull from build
         run: git pull origin build
 
