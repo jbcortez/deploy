@@ -28,8 +28,8 @@ jobs:
       - name: Config rebase
         run: git config pull.rebase false
 
-      - name: Pull from build
-        run: git pull origin build
+#      - name: Pull from build
+#        run: git pull origin build
 
       - name: Add changes
         run: git add .
